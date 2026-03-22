@@ -16,15 +16,15 @@ export const ComparePage = () => {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+      <div className="rounded-2xl border border-border bg-primary p-4">
         <h1 className="text-2xl">Compare firearms</h1>
         <div className="mt-3 flex flex-wrap gap-2">
-          {selected.map((f) => <button key={f.id} onClick={() => removeCompare(f.id)} className="rounded-full border border-zinc-700 px-3 py-1 text-xs">{f.name} ×</button>)}
+          {selected.map((f) => <button key={f.id} onClick={() => removeCompare(f.id)} className="rounded-full border border-border px-3 py-1 text-xs">{f.name} ×</button>)}
         </div>
-        <label className="mt-3 inline-flex items-center gap-2 text-sm text-zinc-300"><input type="checkbox" checked={highlightDiff} onChange={(e) => setHighlightDiff(e.target.checked)} /> Highlight differences</label>
+        <label className="mt-3 inline-flex items-center gap-2 text-sm text-text-primary"><input type="checkbox" checked={highlightDiff} onChange={(e) => setHighlightDiff(e.target.checked)} /> Highlight differences</label>
       </div>
       <ComparisonTable items={selected} highlightDiff={highlightDiff} />
-      <Link to="/browse" className="text-sm text-zinc-400">Add more entries from Browse</Link>
+      <Link to="/browse" className="text-sm text-text-muted">Add more entries from Browse</Link>
     </div>
   );
 };

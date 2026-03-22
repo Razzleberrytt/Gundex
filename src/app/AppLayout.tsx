@@ -4,9 +4,9 @@ import { Footer } from '../components/layout/Footer';
 import { CompareTray } from '../components/compare/CompareTray';
 
 export const AppLayout = () => (
-  <div className="min-h-screen bg-zinc-950 text-zinc-100">
+  <div className="min-h-screen bg-primary text-text-primary transition-colors duration-150 ease-out">
     <Navbar />
-    <main className="mx-auto max-w-6xl px-4 py-6">
+    <main className="mx-auto max-w-6xl px-4 py-6" role="main">
       <Outlet />
     </main>
     <CompareTray />

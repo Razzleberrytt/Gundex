@@ -3,16 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting…</title>
+    <title>Gundex | Not Found</title>
+    <meta http-equiv="refresh" content="0; url=/Gundex/#/" />
   </head>
   <body>
-    <script>
-      const { pathname, search, hash } = window.location;
-      const repoBase = '/Gundex/';
-      const route = pathname.startsWith(repoBase)
-        ? pathname.slice(repoBase.length)
-        : pathname.replace(/^\//, '');
-      window.location.replace(`${repoBase}#/${route}${search}${hash}`);
-    </script>
+    <p>Redirecting to Gundex home…</p>
+    <p>If nothing happens, <a href="/Gundex/#/">click here</a>.</p>
   </body>
 </html>

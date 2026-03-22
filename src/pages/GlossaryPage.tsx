@@ -15,9 +15,9 @@ export const GlossaryPage = () => {
       <SearchBar value={query} onChange={setQuery} placeholder="Search terms…" />
       <div className="space-y-2">
         {filtered.map((term) => (
-          <details key={term.id} className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-            <summary className="cursor-pointer text-zinc-100">{term.term}</summary>
-            <p className="mt-2 text-sm text-zinc-400">{term.definition}</p>
+          <details key={term.id} className="rounded-xl border border-border bg-primary p-4">
+            <summary className="cursor-pointer text-text-primary">{term.term}</summary>
+            <p className="mt-2 text-sm text-text-muted">{term.definition}</p>
           </details>
         ))}
       </div>
