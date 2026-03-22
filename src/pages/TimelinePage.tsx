@@ -16,8 +16,8 @@ export const TimelinePage = () => {
   return (
     <div className="space-y-4">
       <h1 className="text-3xl">Timeline</h1>
-      <p className="text-zinc-400">Explore firearms by introduction period and historical context.</p>
-      <div className="flex flex-wrap gap-2">{decades.map((d) => <button key={d} onClick={() => setDecade(d)} className={`rounded-full border px-3 py-1 text-xs ${d === decade ? 'border-zinc-500 bg-zinc-800' : 'border-zinc-700'}`}>{d}</button>)}</div>
+      <p className="text-text-muted">Explore firearms by introduction period and historical context.</p>
+      <div className="flex flex-wrap gap-2">{decades.map((d) => <button key={d} onClick={() => setDecade(d)} className={`rounded-full border px-3 py-1 text-xs ${d === decade ? 'border-accent/60 bg-secondary' : 'border-border'}`}>{d}</button>)}</div>
       <TimelineStrip items={filtered} />
     </div>
   );

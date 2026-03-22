@@ -9,6 +9,7 @@ import { ManufacturersPage, ManufacturerDetailPage } from '../pages/Manufacturer
 import { TimelinePage } from '../pages/TimelinePage';
 import { GlossaryPage } from '../pages/GlossaryPage';
 import { AboutPage } from '../pages/AboutPage';
+import { NotFoundPage } from '../pages/NotFound';
 
 export const AppRoutes = () => (
   <Routes>
@@ -24,6 +25,7 @@ export const AppRoutes = () => (
       <Route path="timeline" element={<TimelinePage />} />
       <Route path="glossary" element={<GlossaryPage />} />
       <Route path="about" element={<AboutPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Route>
   </Routes>
 );

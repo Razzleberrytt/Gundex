@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { CompareContext } from './compareContext';
 
 const STORAGE_KEY = 'gundex-compare';
+const COMPARE_QUICK_KEY = 'compareList';
 
 export const CompareProvider = ({ children }: { children: React.ReactNode }) => {
   const [compareIds, setCompareIds] = useState<string[]>(() => {
@@ -12,6 +13,7 @@ export const CompareProvider = ({ children }: { children: React.ReactNode }) => 
   const persist = (next: string[]) => {
     setCompareIds(next);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    localStorage.setItem(COMPARE_QUICK_KEY, JSON.stringify(next));
   };
 
   const toggleCompare = (id: string) => {

@@ -20,10 +20,10 @@ export const CollectionDetailPage = () => {
 
   return (
     <div className="space-y-4">
-      <Link to="/collections" className="text-sm text-zinc-400">← Back to collections</Link>
-      <img src={collection.image} className="h-56 w-full rounded-2xl border border-zinc-800 object-cover" />
+      <Link to="/collections" className="text-sm text-accent">← Back to collections</Link>
+      <img loading="lazy" src={collection.image} alt={`${collection.title} collection hero`} className="h-56 w-full rounded-2xl border border-border object-cover" />
       <h1 className="text-3xl">{collection.title}</h1>
-      <p className="text-zinc-400">{collection.summary}</p>
+      <p className="text-text-muted">{collection.summary}</p>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{items.map((item) => <FirearmCard key={item.id} firearm={item} />)}</div>
     </div>
   );
