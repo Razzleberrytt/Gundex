@@ -1,4 +1,4 @@
-import { createHashRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { AppLayout } from './AppLayout';
 import { HomePage } from '../pages/HomePage';
 import { BrowsePage } from '../pages/BrowsePage';
@@ -10,22 +10,20 @@ import { TimelinePage } from '../pages/TimelinePage';
 import { GlossaryPage } from '../pages/GlossaryPage';
 import { AboutPage } from '../pages/AboutPage';
 
-export const router = createHashRouter([
-  {
-    path: '/',
-    element: <AppLayout />,
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: 'browse', element: <BrowsePage /> },
-      { path: 'firearms/:slug', element: <FirearmDetailPage /> },
-      { path: 'compare', element: <ComparePage /> },
-      { path: 'collections', element: <CollectionsPage /> },
-      { path: 'collections/:slug', element: <CollectionDetailPage /> },
-      { path: 'manufacturers', element: <ManufacturersPage /> },
-      { path: 'manufacturers/:slug', element: <ManufacturerDetailPage /> },
-      { path: 'timeline', element: <TimelinePage /> },
-      { path: 'glossary', element: <GlossaryPage /> },
-      { path: 'about', element: <AboutPage /> }
-    ]
-  }
-]);
+export const AppRoutes = () => (
+  <Routes>
+    <Route path="/" element={<AppLayout />}>
+      <Route index element={<HomePage />} />
+      <Route path="browse" element={<BrowsePage />} />
+      <Route path="firearms/:slug" element={<FirearmDetailPage />} />
+      <Route path="compare" element={<ComparePage />} />
+      <Route path="collections" element={<CollectionsPage />} />
+      <Route path="collections/:slug" element={<CollectionDetailPage />} />
+      <Route path="manufacturers" element={<ManufacturersPage />} />
+      <Route path="manufacturers/:slug" element={<ManufacturerDetailPage />} />
+      <Route path="timeline" element={<TimelinePage />} />
+      <Route path="glossary" element={<GlossaryPage />} />
+      <Route path="about" element={<AboutPage />} />
+    </Route>
+  </Routes>
+);
